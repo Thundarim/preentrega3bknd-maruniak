@@ -16,6 +16,10 @@
             <div class="card-body">
                 <p>ID: {{cart._id}}</p>
                 <p>Precio total: <span id="totalPrice"></span></p>
+                <button id="limpiarCarritoBtn" class="btn btn-danger" data-cart-id="{{cart._id}}">Limpiar Carrito</button>
+
+
+
             </div>
         </div>
         <h2 class="my-4">Productos en el carrito:</h2>
@@ -25,6 +29,7 @@
                     <p>Producto: {{this.product.title}}</p>
                     <p>Precio: {{this.product.price}}</p>
                     <p>Cantidad: {{this.quantity}}</p>
+                    </form>
                 </li>
             {{/each}}
         </ul>
@@ -33,8 +38,8 @@
         </form>
     </div>
 
-
     <script type="module" src="js/calculateTotalPrice.js"></script>
+    <script type="module" src="js/clearcart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntXU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9MvcJ4" crossorigin="anonymous"></script>
 </body>

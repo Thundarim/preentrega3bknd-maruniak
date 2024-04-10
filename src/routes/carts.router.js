@@ -8,9 +8,9 @@ const nodemailer = require('nodemailer');
 const configObject  = require('../config/config.js');
 const {nodemail, nodepass} = configObject;
 const Ticket = require ('../dao/models/ticket.model.js');
+const methodOverride = require('method-override');
 
-
-
+router.use(methodOverride('_method'));
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     port: 587,

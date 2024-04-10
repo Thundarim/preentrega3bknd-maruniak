@@ -1,8 +1,11 @@
 const Cart = require("../dao/models/cart.model.js")
 const Product = require("../dao/models/products.model.js");
-
+const ProductManager = require('./productManager.js');
 
 class CartManager {
+  constructor(productManager) {
+    this.productManager = productManager;
+  }
   async getCarts() {
     try {
       const carts = await Cart.find();
@@ -40,7 +43,28 @@ class CartManager {
 }
 
 
-  
+async removeProductFromCart(cartId, productId) {
+  try {
+    const cart = await Cart.findById(cartId);
+    if (!cart) {
+      throw new Error(`No existe ese carrito con el ID especificado: ${cartId}`);
+    }
+    const updatedProducts = cart.products.filter(item => item.product.toString() !== productId);
+    cart.products = updatedProducts;
+    await cart.save();
+    
+    console.log(`Producto ${productId} eliminado del carrito ${cartId}. Nuevo estado del carrito:`, cart);
+    
+    return cart;
+  } catch (error) {
+    console.log(`Error al eliminar el producto ${productId} del carrito ${cartId}:`, error);
+    throw error;
+  }
+}
+
+
+
+
 
   async removeAllProductsFromCart(cartId) {
     try {
