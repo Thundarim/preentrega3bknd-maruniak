@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center mb-4">Mi Perfil</h1>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Bienvenido!, <strong>{{user.first_name}} {{user.last_name}}</strong></p>
+                    <p class="card-text">Email: {{user.email}}</p>
+                    <p class="card-text">Edad: {{user.age}}</p>
+                    <p class="card-text">Rol: {{user.role}}</p>
+                    <p class="card-text">Carrito: {{user.cartId}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

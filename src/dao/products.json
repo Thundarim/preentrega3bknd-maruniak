@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Apple iPhone 13",
+    "description": "The latest smartphone from Apple with advanced features.",
+    "img": "iphone13.jpg",
+    "price": 999.99,
+    "thumbnail": "iphone13-thumb.jpg",
+    "code": "IPH13BLK128",
+    "stock": 50,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Samsung 4K Smart TV",
+    "description": "A high-definition television with smart capabilities for streaming.",
+    "img": "samsungtv.jpg",
+    "price": 799.99,
+    "thumbnail": "samsungtv-thumb.jpg",
+    "code": "SAMSUNGTVA55",
+    "stock": 30,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Nike Air Max Sneakers",
+    "description": "Comfortable and stylish sneakers for everyday wear.",
+    "img": "nikeairmax.jpg",
+    "price": 129.99,
+    "thumbnail": "nikeairmax-thumb.jpg",
+    "code": "NIKEAMBLK10",
+    "stock": 100,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "Sony Noise-Canceling Headphones",
+    "description": "Immerse yourself in music with these premium headphones.",
+    "img": "sonyheadphones.jpg",
+    "price": 249.99,
+    "thumbnail": "sonyheadphones-thumb.jpg",
+    "code": "SONYNCWH1000",
+    "stock": 20,
+    "status": true,
+    "category": "Electronics"
+  }
+]

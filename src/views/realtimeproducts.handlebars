@@ -1,0 +1,57 @@
+<body>
+
+    <div class="container">
+        <h1>Actualizacion de productos en tiempo real</h1>
+        <div class="form-container">
+            <form id="deleteProductForm">
+                <h1>Borrar un producto</h1>
+                <ul class="product-grid" id="productList">
+                    {{#each products}}
+                    <li>
+                        <div class="product-details">
+                            <div>{{title}}</div>
+                            <div>Precio: {{price}}</div>
+                            <div>Stock: {{stock}}</div>
+                            <button type="button" onclick="deleteProduct('{{this._id}}')">Borrar</button>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+<div class="pagination">
+    <button id="previousButton" type="button" onclick="loadPreviousPage()">Anterior</button>
+    <span id="currentPageDisplay"></span>
+    <button id="nextButton" type="button" onclick="loadNextPage()">Siguiente</button>
+</div>
+
+            </form>
+           <form id="addProductForm" onsubmit="addProduct(event)">
+                <h1>Añadir un producto</h1>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="thumbnail">Thumbnail URL:</label>
+                <input type="text" id="thumbnail" name="thumbnail" required>
+
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code" required>
+
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.3/socket.io.min.js" integrity="sha384-+miq58Ltmjm+SSP5g8Ok6dpMO/6R4n8xe/x1Yj0Bdb9kiEz25LTnWv/GZQTRQamg" crossorigin="anonymous"></script>
+    <script src="js/realtime.js"></script>
+</body>

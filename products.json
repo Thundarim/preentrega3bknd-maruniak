@@ -1,0 +1,211 @@
+[
+  {
+    "title": "Sony PlayStation 5",
+    "description": "The latest gaming console from Sony with advanced graphics and processing power.",
+    "img": "ps5.jpg",
+    "price": 499.99,
+    "thumbnail": "ps5-thumb.jpg",
+    "code": "PS5STD",
+    "stock": 50,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Amazon Echo Dot (4th Gen)",
+    "description": "A smart speaker with Alexa voice control for hands-free operation.",
+    "img": "echodot.jpg",
+    "price": 59.99,
+    "thumbnail": "echodot-thumb.jpg",
+    "code": "ECHODOT4",
+    "stock": 100,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Adidas Ultraboost Running Shoes",
+    "description": "High-performance running shoes designed for comfort and stability.",
+    "img": "ultraboost.jpg",
+    "price": 179.99,
+    "thumbnail": "ultraboost-thumb.jpg",
+    "code": "ADIDASUBSTBLK",
+    "stock": 75,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "Canon EOS Rebel T7i DSLR Camera",
+    "description": "A versatile DSLR camera with high-quality image capture and video recording capabilities.",
+    "img": "canoneos.jpg",
+    "price": 799.99,
+    "thumbnail": "canoneos-thumb.jpg",
+    "code": "CANONREBELT7I",
+    "stock": 20,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Calvin Klein Men's Dress Shirt",
+    "description": "A classic dress shirt tailored for a modern fit and crafted from premium materials.",
+    "img": "calvinkleinshirt.jpg",
+    "price": 69.99,
+    "thumbnail": "calvinkleinshirt-thumb.jpg",
+    "code": "CKMENDRESSSHIRT",
+    "stock": 50,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "LG 65-inch OLED 4K TV",
+    "description": "An OLED television with stunning picture quality and immersive sound.",
+    "img": "lgoledtv.jpg",
+    "price": 1999.99,
+    "thumbnail": "lgoledtv-thumb.jpg",
+    "code": "LGOLED65",
+    "stock": 10,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Bose QuietComfort 35 II Headphones",
+    "description": "Wireless headphones with world-class noise cancellation for a distraction-free listening experience.",
+    "img": "boseqc35ii.jpg",
+    "price": 299.99,
+    "thumbnail": "boseqc35ii-thumb.jpg",
+    "code": "BOSEQC35II",
+    "stock": 40,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Levi's 501 Original Fit Jeans",
+    "description": "Timeless denim jeans known for their classic straight leg and iconic design.",
+    "img": "levis501.jpg",
+    "price": 59.99,
+    "thumbnail": "levis501-thumb.jpg",
+    "code": "LEVIS501BLK",
+    "stock": 80,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "Dell XPS 13 Laptop",
+    "description": "A powerful and portable laptop with a stunning InfinityEdge display.",
+    "img": "dellxps13.jpg",
+    "price": 1299.99,
+    "thumbnail": "dellxps13-thumb.jpg",
+    "code": "DELLXPS13I7",
+    "stock": 25,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Ray-Ban Classic Wayfarer Sunglasses",
+    "description": "Iconic sunglasses with a timeless design and UV protection lenses.",
+    "img": "raybanwayfarer.jpg",
+    "price": 149.99,
+    "thumbnail": "raybanwayfarer-thumb.jpg",
+    "code": "RAYBANWAYFARER",
+    "stock": 60,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "GoPro HERO9 Black",
+    "description": "A versatile action camera with 5K video capabilities and waterproof design.",
+    "img": "goprohero9.jpg",
+    "price": 449.99,
+    "thumbnail": "goprohero9-thumb.jpg",
+    "code": "GOPROHERO9BLK",
+    "stock": 35,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Nike Tech Fleece Jogger Pants",
+    "description": "Warm and comfortable jogger pants crafted from Nike's innovative Tech Fleece fabric.",
+    "img": "niketechfleece.jpg",
+    "price": 89.99,
+    "thumbnail": "niketechfleece-thumb.jpg",
+    "code": "NIKETECHJOGGER",
+    "stock": 70,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "Microsoft Xbox Series X",
+    "description": "The next-generation gaming console from Microsoft with powerful performance and lightning-fast load times.",
+    "img": "xboxseriesx.jpg",
+    "price": 599.99,
+    "thumbnail": "xboxseriesx-thumb.jpg",
+    "code": "XBOXSERIESX",
+    "stock": 30,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Ralph Lauren Polo Shirt",
+    "description": "A classic polo shirt featuring Ralph Lauren's signature embroidered pony logo.",
+    "img": "ralphlaurenshirt.jpg",
+    "price": 79.99,
+    "thumbnail": "ralphlaurenshirt-thumb.jpg",
+    "code": "RLPOLOSHIRT",
+    "stock": 45,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "Samsung Galaxy Tab S7",
+    "description": "A versatile tablet with an immersive display and powerful performance for work and play.",
+    "img": "samsungtabs7.jpg",
+    "price": 649.99,
+    "thumbnail": "samsungtabs7-thumb.jpg",
+    "code": "SAMSUNGTABS7",
+    "stock": 15,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Under Armour Men's Tech 2.0 T-Shirt",
+    "description": "A lightweight and breathable t-shirt designed for maximum comfort during workouts.",
+    "img": "underarmourtshirt.jpg",
+    "price": 24.99,
+    "thumbnail": "underarmourtshirt-thumb.jpg",
+    "code": "UATECHTSHIRT",
+    "stock": 120,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "Apple MacBook Pro 16-inch",
+    "description": "A powerful laptop with a stunning Retina display and advanced performance for professionals.",
+    "img": "macbookpro16.jpg",
+    "price": 2399.99,
+    "thumbnail": "macbookpro16-thumb.jpg",
+    "code": "MACBOOKPRO16",
+    "stock": 10,
+    "status": true,
+    "category": "Electronics"
+  },
+  {
+    "title": "Puma RS-X Sneakers",
+    "description": "Bold and stylish sneakers inspired by retro running shoes with modern comfort technology.",
+    "img": "pumarsx.jpg",
+    "price": 119.99,
+    "thumbnail": "pumarsx-thumb.jpg",
+    "code": "PUMARSXBLU",
+    "stock": 90,
+    "status": true,
+    "category": "Fashion"
+  },
+  {
+    "title": "LG Soundbar with Dolby Atmos",
+    "description": "A premium soundbar system with Dolby Atmos support for immersive audio experiences.",
+    "img": "lgsoundbar.jpg",
+    "price": 499.99,
+    "thumbnail": "lgsoundbar-thumb.jpg",
+    "code": "LGSOUNDBARATMOS",
+    "stock": 25,
+    "status": true,
+    "category": "Electronics"
+  }
+]

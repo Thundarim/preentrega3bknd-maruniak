@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del carrito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOu805FkTduG2Fj3J3U67H2+X4eqzH6+3U5m+g6rD0" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Detalles del carrito</h1>
+        <div class="card">
+            <div class="card-header">
+                Informacion del Carrito:
+            </div>
+            <div class="card-body">
+                <p>ID: {{cart._id}}</p>
+                <p>Precio total: <span id="totalPrice"></span></p>
+            </div>
+        </div>
+        <h2 class="my-4">Productos en el carrito:</h2>
+        <ul class="list-group">
+            {{#each cart.products}}
+                <li class="list-group-item">
+                    <p>Producto: {{this.product.title}}</p>
+                    <p>Precio: {{this.product.price}}</p>
+                    <p>Cantidad: {{this.quantity}}</p>
+                </li>
+            {{/each}}
+        </ul>
+        <form action="/api/carts/{{cart._id}}/purchase" method="POST">
+            <button type="submit" class="btn btn-primary">Comprar</button>
+        </form>
+    </div>
+
+
+    <script type="module" src="js/calculateTotalPrice.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntXU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9MvcJ4" crossorigin="anonymous"></script>
+</body>
+</html>

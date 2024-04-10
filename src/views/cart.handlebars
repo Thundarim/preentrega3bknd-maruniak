@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e9T9hXmJ58bldgTk+" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Carrito de compras</h1>
+        <ul class="list-group cart-list" id="cartList">
+            {{#each carts}}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="cart-details">
+                        <div>ID del carrito: {{_id}}</div>
+                        <div>Precio total: {{totalPrice}}</div>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="viewCart('{{_id}}')">Ver carrito</button>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    <script src="https://cdn.socket.io/4.7.3/socket.io.min.js" integrity="sha384-+miq58Ltmjm+SSP5g8Ok6dpMO/6R4n8xe/x1Yj0Bdb9kiEz25LTnWv/GZQTRQamg" crossorigin="anonymous"></script>
+    <script src="js/carts.js"></script>
+    <script>
+        function viewCart(cartId) {
+            window.location.href = "/carts/" + cartId;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Ecommerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                {{#if isAdmin}}
+                <li class="nav-item">
+                    <a href="/cart" class="nav-link">Carritos pero con admin</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/realtimeproducts" class="nav-link">Administrar productos</a>
+                </li>
+                {{/if}}
+
+
+                {{#if loggedIn}}
+                {{#unless isAdmin}}
+                                <li class="nav-item">
+                    <a href="/products" class="nav-link">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/chat" class="nav-link">Chat</a>
+                </li>
+                                <li class="nav-item">
+                    <a href="api/sessions/cart" class="nav-link">Mi carrito</a>
+                </li>
+                {{/unless}}
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Usuario
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="/profile" class="dropdown-item">Perfil</a>
+                        <a href="/api/sessions/logout" class="dropdown-item">Cerrar sesión</a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Usuario
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="/login" class="dropdown-item">Iniciar sesión</a>
+                        <a href="/register" class="dropdown-item">Registrarse</a>
+                    </div>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+</header>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
