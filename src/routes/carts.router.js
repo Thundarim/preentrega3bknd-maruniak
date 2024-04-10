@@ -7,6 +7,7 @@ const cartManager = new CartManager();
 const nodemailer = require('nodemailer');
 const configObject  = require('../config/config.js');
 const {nodemail, nodepass} = configObject;
+const Ticket = require ('../dao/models/ticket.model.js');
 
 
 
@@ -163,6 +164,29 @@ router.delete("/carts/:cid", async (req, res) => {
 
 // Comprar productos
 
+// Funcion para el ticket unico
+function generateUniqueTicketCode() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let code = '';
+    for (let i = 0; i < 8; i++) {
+        code += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return code;
+}
+
+// Funcion para el monto total
+function calculateTotalAmount(productsInCart) {
+    let totalAmount = 0;
+    for (const item of productsInCart) {
+        const product = item.product;
+        const quantity = item.quantity;
+        const subtotal = product.price * quantity;
+        totalAmount += subtotal;
+    }
+    return totalAmount;
+}
+
+
 router.post("/carts/:cid/purchase", async (req, res) => {
     const userEmail = req.session.user.email;
 
@@ -189,6 +213,14 @@ router.post("/carts/:cid/purchase", async (req, res) => {
             });
         }
         const ticket = await generateTicket(productsInCart);
+        const newTicket = new Ticket({
+            code: generateUniqueTicketCode(),
+            amount: calculateTotalAmount(productsInCart),
+            purchaser: userEmail,
+            ticketInfo: ticket
+        });
+        await newTicket.save();
+
         const mailOptions = {
             from: 'your_email@gmail.com',
             to: userEmail,

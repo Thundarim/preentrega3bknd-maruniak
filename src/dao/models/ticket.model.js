@@ -17,10 +17,12 @@ const ticketSchema = new mongoose.Schema({
   purchaser: {
     type: String,
     required: true
+  },
+  ticketInfo: {
+    type: String
   }
 });
 
-// Definir el modelo Ticket
 const Ticket = mongoose.model('Ticket', ticketSchema);
 
 module.exports = Ticket;
